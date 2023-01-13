@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="Plotting Demo", page_icon="📈")
 
+st.sidebar.header("Plotting Demo")
+
 image = Image.open('LSTM.jpg')
 
 st.title('Cryptocurrency')
