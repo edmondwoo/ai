@@ -10,5 +10,3 @@ matplotlib
 seaborn
 Pillow
 pandas_profiling
-os
-math
