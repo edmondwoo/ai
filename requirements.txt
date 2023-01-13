@@ -8,5 +8,5 @@ streamlit_pandas
 streamlit_pandas_profiling
 matplotlib
 seaborn
-PIL
+Pillow
 pandas_profiling
