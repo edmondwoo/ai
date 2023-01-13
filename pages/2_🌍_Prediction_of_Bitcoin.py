@@ -37,7 +37,7 @@ class Toc:
         
 toc = Toc()
 
-toc.title('PredictionofBitcoin')
+toc.title('Prediction of Bitcoin')
 # st.write('Cryptocurrency is a relatively new medium of exchange that’s gained popularity in the past decade. Crypto cheerleaders think the future of finance is cryptocurrency rather than stocks and conventional forms of currency, while others believe that the unregulated nature of cryptocurrency makes it too risky to support a full-fledged financial system. Cryptocurrencies lack government backing, and how much the market will bear determines their value.')
 # st.write('Cryptocurrencies are maintained on decentralized networks of computers spread around the world. Strong cryptography provides security to transactions and storage, hence the term “cryptocurrency.” A cryptocurrency owner must use a password of at least 16 characters to gain access.')
 
