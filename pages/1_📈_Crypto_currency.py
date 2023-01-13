@@ -8,6 +8,7 @@ import streamlit_pandas as sp
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+st.set_page_config(page_title="Plotting Demo", page_icon="📈")
 
 image = Image.open('LSTM.jpg')
 
