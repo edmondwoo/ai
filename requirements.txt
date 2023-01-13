@@ -7,7 +7,6 @@ Jinja2==3.0.3
 streamlit_pandas
 streamlit_pandas_profiling
 matplotlib
-pyplot
 seaborn
 PIL
 pandas_profiling
