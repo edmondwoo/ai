@@ -10,3 +10,6 @@ matplotlib
 seaborn
 Pillow
 pandas_profiling
+scikit-learn
+tensorflow
+plotly
