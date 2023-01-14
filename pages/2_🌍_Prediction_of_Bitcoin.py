@@ -30,6 +30,8 @@ import plotly.graph_objects as go
 import plotly.express as px
 from plotly.subplots import make_subplots
 
+import pickle
+
 class Toc:
 
     def __init__(self):
@@ -74,4 +76,26 @@ toc.title('Prediction of Bitcoin')
 # st.write('Cryptocurrencies are maintained on decentralized networks of computers spread around the world. Strong cryptography provides security to transactions and storage, hence the term “cryptocurrency.” A cryptocurrency owner must use a password of at least 16 characters to gain access.')
 
 # toc.header("Subheader 2")
+
+model = tf.keras.models.load_model('data/my_model.h5')
+
+with open('data/trainHistoryDict', "rb") as file_pi:
+    history = pickle.load(file_pi)
+
+loss = history.history['loss']
+val_loss = history.history['val_loss']
+
+print(loss)
+
+epochs = range(len(loss))
+
+plt.plot(epochs, loss, 'r', label='Training loss')
+plt.plot(epochs, val_loss, 'b', label='Validation loss')
+plt.title('Training and validation loss')
+plt.legend(loc=0)
+fig=plt.figure(figsize=(9,8))
+
+
+st.pyplot(fig)
+
 toc.generate()
