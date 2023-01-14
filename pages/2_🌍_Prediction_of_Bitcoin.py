@@ -32,6 +32,12 @@ from plotly.subplots import make_subplots
 
 import pickle
 
+from PIL import Image
+
+prediction = Image.open('data/prediction.png')
+
+beforePrice = Image.open('data/beforePrice.png')
+
 class Toc:
 
     def __init__(self):
@@ -77,25 +83,29 @@ toc.title('Prediction of Bitcoin')
 
 # toc.header("Subheader 2")
 
-model = tf.keras.models.load_model('data/my_model.h5')
+# model = tf.keras.models.load_model('data/my_model.h5')
 
-with open('data/trainHistoryDict', "rb") as file_pi:
-    history = pickle.load(file_pi)
+# with open('data/trainHistoryDict', "rb") as file_pi:
+#     history = pickle.load(file_pi)
 
-loss = history.history['loss']
-val_loss = history.history['val_loss']
+# loss = history.history['loss']
+# val_loss = history.history['val_loss']
 
-print(loss)
+# print(loss)
 
-epochs = range(len(loss))
+# epochs = range(len(loss))
 
-plt.plot(epochs, loss, 'r', label='Training loss')
-plt.plot(epochs, val_loss, 'b', label='Validation loss')
-plt.title('Training and validation loss')
-plt.legend(loc=0)
-fig=plt.figure(figsize=(9,8))
+# plt.plot(epochs, loss, 'r', label='Training loss')
+# plt.plot(epochs, val_loss, 'b', label='Validation loss')
+# plt.title('Training and validation loss')
+# plt.legend(loc=0)
+# fig=plt.figure(figsize=(9,8))
 
 
-st.pyplot(fig)
+# st.pyplot(fig)
+
+st.image(prediction, caption='Plotting whole closing stock price with prediction')
+
+st.image(beforePrice, caption='Considered period to predict Bitcoin close price')
 
 toc.generate()
